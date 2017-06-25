@@ -41,6 +41,7 @@
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="iid-sd-jy4">
                                 <rect key="frame" x="20" y="129" width="335" height="518"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9QZ-ZW-gNP">
                                     <size key="itemSize" width="105" height="105"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -48,7 +49,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="wdx-1E-G8F">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PokeCell" id="wdx-1E-G8F" customClass="PokeCell" customModule="Pokedex" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="105" height="105"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -56,10 +57,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4" translatesAutoresizingMaskIntoConstraints="NO" id="yrm-hh-5Gs">
-                                                    <rect key="frame" x="0.0" y="-42" width="105" height="120"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="105" height="78"/>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPJ-bP-Pxs">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Charmander" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPJ-bP-Pxs">
                                                     <rect key="frame" x="0.0" y="78" width="105" height="27"/>
                                                     <color key="backgroundColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
@@ -69,6 +70,7 @@
                                             </subviews>
                                         </view>
                                         <constraints>
+                                            <constraint firstItem="yrm-hh-5Gs" firstAttribute="top" secondItem="wdx-1E-G8F" secondAttribute="top" id="7xt-RW-mgh"/>
                                             <constraint firstItem="gPJ-bP-Pxs" firstAttribute="trailing" secondItem="yrm-hh-5Gs" secondAttribute="trailing" id="IKI-Xm-Zxh"/>
                                             <constraint firstAttribute="bottom" secondItem="gPJ-bP-Pxs" secondAttribute="bottom" id="J78-SW-uZS"/>
                                             <constraint firstItem="gPJ-bP-Pxs" firstAttribute="top" secondItem="wdx-1E-G8F" secondAttribute="topMargin" constant="70" id="JdJ-2A-LdQ"/>
@@ -78,6 +80,10 @@
                                             <constraint firstItem="gPJ-bP-Pxs" firstAttribute="top" secondItem="yrm-hh-5Gs" secondAttribute="bottom" id="d23-Db-9Tc"/>
                                             <constraint firstItem="gPJ-bP-Pxs" firstAttribute="leading" secondItem="yrm-hh-5Gs" secondAttribute="leading" id="dkL-zE-OLF"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="nameLbl" destination="gPJ-bP-Pxs" id="qUj-wK-mcs"/>
+                                            <outlet property="thumbImg" destination="yrm-hh-5Gs" id="hVI-Rb-jxe"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -100,6 +106,9 @@
                             <constraint firstItem="OiG-px-gbD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="sNa-uA-2Xo"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collection" destination="iid-sd-jy4" id="4BQ-IS-3Kc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
