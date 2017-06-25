@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6110A11E1EFCE9C9002786E6 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6110A11D1EFCE9C9002786E6 /* Pokemon.swift */; };
+		61C4BC6D1F0031440037765A /* csv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C4BC6C1F0031440037765A /* csv.swift */; };
+		61F110F11EFF78FC00FD1960 /* PokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F110F01EFF78FC00FD1960 /* PokeCell.swift */; };
 		A9D1E46A1EF3273A008E352F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D1E4691EF3273A008E352F /* AppDelegate.swift */; };
 		A9D1E46C1EF3273A008E352F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D1E46B1EF3273A008E352F /* ViewController.swift */; };
 		A9D1E46F1EF3273A008E352F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9D1E46D1EF3273A008E352F /* Main.storyboard */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6110A11D1EFCE9C9002786E6 /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		61C4BC6C1F0031440037765A /* csv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = csv.swift; sourceTree = "<group>"; };
+		61F110F01EFF78FC00FD1960 /* PokeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeCell.swift; sourceTree = "<group>"; };
 		A9D1E4661EF3273A008E352F /* Pokedex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pokedex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9D1E4691EF3273A008E352F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9D1E46B1EF3273A008E352F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +43,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6110A11C1EFCE920002786E6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6110A11D1EFCE9C9002786E6 /* Pokemon.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		61F110EF1EFF78CE00FD1960 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				61F110F01EFF78FC00FD1960 /* PokeCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		A9D1E45D1EF3273A008E352F = {
 			isa = PBXGroup;
 			children = (
@@ -56,11 +78,14 @@
 		A9D1E4681EF3273A008E352F /* Pokedex */ = {
 			isa = PBXGroup;
 			children = (
+				61F110EF1EFF78CE00FD1960 /* View */,
+				6110A11C1EFCE920002786E6 /* Model */,
 				A9D1E4691EF3273A008E352F /* AppDelegate.swift */,
 				A9D1E46B1EF3273A008E352F /* ViewController.swift */,
 				A9D1E46D1EF3273A008E352F /* Main.storyboard */,
 				A9D1E4701EF3273A008E352F /* Assets.xcassets */,
 				A9D1E47B1EF328B8008E352F /* pokemon.csv */,
+				61C4BC6C1F0031440037765A /* csv.swift */,
 				A9D1E4721EF3273A008E352F /* LaunchScreen.storyboard */,
 				A9D1E4751EF3273A008E352F /* Info.plist */,
 			);
@@ -99,6 +124,7 @@
 				TargetAttributes = {
 					A9D1E4651EF3273A008E352F = {
 						CreatedOnToolsVersion = 8.3.3;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -140,8 +166,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61F110F11EFF78FC00FD1960 /* PokeCell.swift in Sources */,
 				A9D1E46C1EF3273A008E352F /* ViewController.swift in Sources */,
 				A9D1E46A1EF3273A008E352F /* AppDelegate.swift in Sources */,
+				6110A11E1EFCE9C9002786E6 /* Pokemon.swift in Sources */,
+				61C4BC6D1F0031440037765A /* csv.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +332,7 @@
 				A9D1E47A1EF3273A008E352F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
