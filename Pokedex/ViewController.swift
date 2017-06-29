@@ -193,6 +193,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             if let detailsVC = segue.destination as? PokemonDetailVC {
                 if let poke = sender as? Pokemon {
                     detailsVC.pokemon = poke
+                    
                 }
             }
         }
