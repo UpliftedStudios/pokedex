@@ -28,7 +28,23 @@ class PokemonDetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-nameLbl.text = pokemon.name
+        nameLbl.text = pokemon.name
+        
+        pokemon.downloadPokemonDetails {
+            
+            print("Did arrive here!")
+            //Whatever I write here will only be called AFTER the network call is complete because of the closure in Constants.
+            self.updateUI()
+        }
+    }
+    
+    func updateUI() {
+        
+        attackLbl.text = pokemon.attack
+        defenseLbl.text = pokemon.defense
+        heightLbl.text = pokemon.height
+        weightLbl.text = pokemon.weight
+        
     }
 
 
